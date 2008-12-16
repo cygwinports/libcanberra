@@ -1,0 +1,13 @@
+category: Audio
+requires: cygwin libglib2.0_0 libgstreamer0.10_0 libltdl7 libvorbisfile3 sound-theme-freedesktop
+external-source: libcanberra
+sdesc: "Freedesktop.org Sound Theme library (runtime)"
+ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name
+Specifications, for generating event sounds on free desktops, such as
+GNOME. It comes with several backends and is designed to be portable. It
+consists of the following parts:
+ 1. libcanberra: the main library
+ 2. libcanberra-gtk: some glue code to make it easier to use
+    libcanberra from Gtk+ applications
+ 3. libcanberra-gtk-module: a Gtk+ module that uses libcanberra-gtk to
+    trigger input feedback event sounds"

@@ -1,0 +1,21 @@
+inherit gnome2
+
+DESCRIPTION="Freedesktop sound event library"
+HOMEPAGE="http://0pointer.de/lennart/projects/libcanberra"
+SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
+PATCH_URI="0.9-no-undefined.patch
+           0.4-va_list.patch"
+
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module"
+libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${PN}/ usr/share/doc/"
+libcanberra_devel_CONTENTS="usr/include/canberra.h usr/lib/${PN}.*
+                            usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
+libcanberra_gtk0_CONTENTS="usr/bin/canberra-gtk-play.exe usr/bin/cygcanberra-gtk-0.dll"
+libcanberra_gtk_devel_CONTENTS="usr/include/canberra-gtk.h usr/lib/${PN}-gtk.*
+                                usr/lib/pkgconfig/${PN}-gtk.pc"
+gtk2_0_canberra_module_CONTENTS="etc/ usr/lib/gtk-2.0/ usr/share/gnome/"
+
+DIFF_EXCLUDES="libltdl"
+
+# stick with gstreamer...
+CYGCONF_ARGS="--disable-alsa --disable-oss --disable-pulse"

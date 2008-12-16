@@ -1,0 +1,122 @@
+libcanberra
+------------------------------------------
+libcanberra is an implementation of the XDG Sound Theme and Name 
+Specifications, for generating event sounds on free desktops, such as 
+GNOME. It comes with several backends and is designed to be portable. It 
+consists of the following parts:
+ 1. libcanberra: the main library
+ 2. libcanberra-gtk: some glue code to make it easier to use
+    libcanberra from Gtk+ applications
+ 3. libcanberra-gtk-module: a Gtk+ module that uses libcanberra-gtk to
+    trigger input feedback event sounds
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libglib2.0_0-2.18.3-1
+  libgstreamer0.10_0-0.10.21-2
+  libgtk2_0-2.14.5-1
+  libltdl7-2.2.6a-1
+  libvorbisfile3-1.2.0-2
+  libX11_6-1.1.5-1
+  sound-theme-freedesktop
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  gnome-common-2.24.0-1
+  gtk-doc-1.11-1
+  libtool-2.2.6a-1
+  lynx-2.8.5-4
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://0pointer.de/lennart/projects/libcanberra
+
+Canonical download:
+  http://0pointer.de/lennart/projects/libcanberra/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libcanberra-0.10-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libcanberra-0.10-X.cygport all
+
+This will create:
+  /usr/src/gtk2.0-canberra-module-0.10-X.tar.bz2
+  /usr/src/libcanberra-0.10-X-src.tar.bz2
+  /usr/src/libcanberra-devel-0.10-X.tar.bz2
+  /usr/src/libcanberra-gtk-devel-0.10-X.tar.bz2
+  /usr/src/libcanberra-gtk0-0.10-X.tar.bz2
+  /usr/src/libcanberra0-0.10-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(gtk2.0-canberra-module)
+  /etc/gconf/schemas/libcanberra.schemas
+  /etc/postinstall/libcanberra.sh
+  /etc/preremove/libcanberra.sh
+  /usr/lib/gtk-2.0/modules/cygcanberra-gtk-module.dll
+  /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.la
+  /usr/share/gnome/autostart/libcanberra-login-sound.desktop
+  /usr/share/gnome/shutdown/libcanberra-logout-sound.sh
+
+(libcanberra0)
+  /usr/bin/cygcanberra-0.dll
+  /usr/lib/libcanberra/cygcanberra-gstreamer.dll
+  /usr/lib/libcanberra/cygcanberra-multi.dll
+  /usr/lib/libcanberra/cygcanberra-null.dll
+  /usr/lib/libcanberra/libcanberra-gstreamer.la
+  /usr/lib/libcanberra/libcanberra-multi.la
+  /usr/lib/libcanberra/libcanberra-null.la
+  /usr/share/doc/libcanberra-0.10/README
+
+(libcanberra-gtk0)
+  /usr/bin/cygcanberra-gtk-0.dll
+  /usr/bin/canberra-gtk-play.exe
+
+(libcanberra-devel)
+  /usr/include/canberra.h
+  /usr/lib/libcanberra.dll.a
+  /usr/lib/libcanberra.la
+  /usr/lib/pkgconfig/libcanberra.pc
+  /usr/share/gtk-doc/html/libcanberra/ch01.html
+  /usr/share/gtk-doc/html/libcanberra/home.png
+  /usr/share/gtk-doc/html/libcanberra/index.html
+  /usr/share/gtk-doc/html/libcanberra/index.sgml
+  /usr/share/gtk-doc/html/libcanberra/left.png
+  /usr/share/gtk-doc/html/libcanberra/libcanberra-canberra-gtk.html
+  /usr/share/gtk-doc/html/libcanberra/libcanberra-canberra.html
+  /usr/share/gtk-doc/html/libcanberra/libcanberra.devhelp
+  /usr/share/gtk-doc/html/libcanberra/libcanberra.devhelp2
+  /usr/share/gtk-doc/html/libcanberra/right.png
+  /usr/share/gtk-doc/html/libcanberra/style.css
+  /usr/share/gtk-doc/html/libcanberra/up.png
+
+(libcanberra-gtk-devel)
+  /usr/include/canberra-gtk.h
+  /usr/lib/libcanberra-gtk.dll.a
+  /usr/lib/libcanberra-gtk.la
+  /usr/lib/pkgconfig/libcanberra-gtk.pc
+
+------------------
+
+Port Notes:
+
+----- version 0.10-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
