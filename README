@@ -12,12 +12,17 @@ consists of the following parts:
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libglib2.0_0-2.18.3-1
-  libgstreamer0.10_0-0.10.21-2
-  libgtk2_0-2.14.5-1
+  gstreamer0.10-plugins-base
+  gstreamer0.10-plugins-good
+  gstreamer0.10-plugins-ogg
+  gstreamer0.10-plugins-oss
+  gstreamer0.10-plugins-vorbis
+  libglib2.0_0-2.18.4-1
+  libgstreamer0.10_0-0.10.22-1
+  libgtk2_0-2.14.7-2
   libltdl7-2.2.6a-1
   libvorbisfile3-1.2.0-2
-  libX11_6-1.1.5-1
+  libX11_6-1.1.5-2
   sound-theme-freedesktop
 
 Build requirements:
@@ -45,19 +50,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libcanberra-0.10-X-src.tar.bz2
+  unpack libcanberra-0.11-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libcanberra-0.10-X.cygport all
+  cygport ./libcanberra-0.11-X.cygport all
 
 This will create:
-  /usr/src/gtk2.0-canberra-module-0.10-X.tar.bz2
-  /usr/src/libcanberra-0.10-X-src.tar.bz2
-  /usr/src/libcanberra-devel-0.10-X.tar.bz2
-  /usr/src/libcanberra-gtk-devel-0.10-X.tar.bz2
-  /usr/src/libcanberra-gtk0-0.10-X.tar.bz2
-  /usr/src/libcanberra0-0.10-X.tar.bz2
+  /usr/src/gtk2.0-canberra-module-0.11-X.tar.bz2
+  /usr/src/libcanberra-0.11-X-src.tar.bz2
+  /usr/src/libcanberra-devel-0.11-X.tar.bz2
+  /usr/src/libcanberra-gtk-devel-0.11-X.tar.bz2
+  /usr/src/libcanberra-gtk0-0.11-X.tar.bz2
+  /usr/src/libcanberra0-0.11-X.tar.bz2
 
 -------------------------------------------
 
@@ -74,13 +79,13 @@ Files included in the binary packages:
 
 (libcanberra0)
   /usr/bin/cygcanberra-0.dll
-  /usr/lib/libcanberra/cygcanberra-gstreamer.dll
-  /usr/lib/libcanberra/cygcanberra-multi.dll
-  /usr/lib/libcanberra/cygcanberra-null.dll
-  /usr/lib/libcanberra/libcanberra-gstreamer.la
-  /usr/lib/libcanberra/libcanberra-multi.la
-  /usr/lib/libcanberra/libcanberra-null.la
-  /usr/share/doc/libcanberra-0.10/README
+  /usr/lib/libcanberra-0.11/cygcanberra-gstreamer.dll
+  /usr/lib/libcanberra-0.11/cygcanberra-multi.dll
+  /usr/lib/libcanberra-0.11/cygcanberra-null.dll
+  /usr/lib/libcanberra-0.11/libcanberra-gstreamer.la
+  /usr/lib/libcanberra-0.11/libcanberra-multi.la
+  /usr/lib/libcanberra-0.11/libcanberra-null.la
+  /usr/share/doc/libcanberra-0.11/README
 
 (libcanberra-gtk0)
   /usr/bin/cygcanberra-gtk-0.dll
@@ -113,6 +118,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.11-1 -----
+Version bump.
 
 ----- version 0.10-1 -----
 Initial release for Cygwin.
