@@ -1,5 +1,5 @@
 category: Gnome
-requires: cygwin GConf2 libcanberra-gtk0 libglib2.0_0 libgtk2.0_0 libX11_6
+requires: cygwin GConf2 libcanberra-gtk0 libgcc1 libglib2.0_0 libgtk2.0_0 libX11_6
 external-source: libcanberra
 sdesc: "Freedesktop.org Sound Theme library (GTK+ module)"
 ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name
