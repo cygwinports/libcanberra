@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin gstreamer0.10-plugins-base gstreamer0.10-plugins-good gstreamer0.10-plugins-ogg gstreamer0.10-plugins-oss gstreamer0.10-plugins-vorbis libgcc1 libglib2.0_0 libgstreamer0.10_0 libltdl7 libvorbisfile3 sound-theme-freedesktop
+requires: gstreamer0.10-plugins-base gstreamer0.10-plugins-good gstreamer0.10-plugins-ogg gstreamer0.10-plugins-oss gstreamer0.10-plugins-vorbis libgcc1 libglib2.0_0 libgstreamer0.10_0 libltdl7 libvorbisfile3 sound-theme-freedesktop
 external-source: libcanberra
 sdesc: "Freedesktop.org Sound Theme library (runtime)"
 ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name
