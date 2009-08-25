@@ -11,34 +11,34 @@ consists of the following parts:
     trigger input feedback event sounds
 
 Runtime requirements:
-  cygwin-1.7.0-45
+  cygwin-1.7.0-60
   gstreamer0.10-plugins-base
   gstreamer0.10-plugins-good
   gstreamer0.10-plugins-ogg
   gstreamer0.10-plugins-oss
   gstreamer0.10-plugins-vorbis
   libgcc1-4.3.2-2
-  libglib2.0_0-2.20.0-1
-  libgstreamer0.10_0-0.10.22-10
-  libgtk2_0-2.16.0-1
-  libltdl7-2.2.7a-12
+  libglib2.0_0-2.20.4-1
+  libgstreamer0.10_0-0.10.23-1
+  libgtk2_0-2.16.5-1
+  libltdl7-2.2.7a-14
   libvorbisfile3-1.2.0-2
-  libX11_6-1.2-10
+  libX11_6-1.2.2-1
   sound-theme-freedesktop
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
+  autoconf2.5-2.64-10
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
-  gnome-common-2.26.0-1
+  gnome-common-2.26.0-2
   gtk-doc-1.11-2
-  libtool-2.2.7a-12
+  libtool-2.2.7a-14
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -50,19 +50,19 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libcanberra-0.12-X-src.tar.bz2
+  unpack libcanberra-0.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libcanberra-0.12-X.cygport all
+  cygport ./libcanberra-0.15-X.cygport all
 
 This will create:
-  /usr/src/gtk2.0-canberra-module-0.12-X.tar.bz2
-  /usr/src/libcanberra-0.12-X-src.tar.bz2
-  /usr/src/libcanberra-devel-0.12-X.tar.bz2
-  /usr/src/libcanberra-gtk-devel-0.12-X.tar.bz2
-  /usr/src/libcanberra-gtk0-0.12-X.tar.bz2
-  /usr/src/libcanberra0-0.12-X.tar.bz2
+  /usr/src/gtk2.0-canberra-module-0.15-X.tar.bz2
+  /usr/src/libcanberra-0.15-X-src.tar.bz2
+  /usr/src/libcanberra-devel-0.15-X.tar.bz2
+  /usr/src/libcanberra-gtk-devel-0.15-X.tar.bz2
+  /usr/src/libcanberra-gtk0-0.15-X.tar.bz2
+  /usr/src/libcanberra0-0.15-X.tar.bz2
 
 -------------------------------------------
 
@@ -79,12 +79,12 @@ Files included in the binary packages:
 
 (libcanberra0)
   /usr/bin/cygcanberra-0.dll
-  /usr/lib/libcanberra-0.12/cygcanberra-gstreamer.dll
-  /usr/lib/libcanberra-0.12/cygcanberra-multi.dll
-  /usr/lib/libcanberra-0.12/cygcanberra-null.dll
-  /usr/lib/libcanberra-0.12/libcanberra-gstreamer.la
-  /usr/lib/libcanberra-0.12/libcanberra-multi.la
-  /usr/lib/libcanberra-0.12/libcanberra-null.la
+  /usr/lib/libcanberra-0.15/cygcanberra-gstreamer.dll
+  /usr/lib/libcanberra-0.15/cygcanberra-multi.dll
+  /usr/lib/libcanberra-0.15/cygcanberra-null.dll
+  /usr/lib/libcanberra-0.15/libcanberra-gstreamer.la
+  /usr/lib/libcanberra-0.15/libcanberra-multi.la
+  /usr/lib/libcanberra-0.15/libcanberra-null.la
   /usr/share/doc/libcanberra/README
 
 (libcanberra-gtk0)
@@ -118,6 +118,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.15-1 -----
+Version bump.
 
 ----- version 0.12-1 -----
 Initial release for Cygwin 1.7.
