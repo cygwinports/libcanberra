@@ -6,14 +6,17 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 PATCH_URI="0.9-no-undefined.patch
            0.4-va_list.patch"
 
-PKG_NAMES="${PN} ${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module"
+PKG_NAMES="${PN} ${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel
+           gtk2.0-canberra-module vala-libcanberra vala-libcanberra-gtk"
 libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${P}/ usr/share/doc/"
 libcanberra_devel_CONTENTS="usr/include/canberra.h usr/lib/${PN}.*
                             usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
 libcanberra_gtk0_CONTENTS="usr/bin/canberra-gtk-play.exe usr/bin/cygcanberra-gtk-0.dll"
 libcanberra_gtk_devel_CONTENTS="usr/include/canberra-gtk.h usr/lib/${PN}-gtk.*
                                 usr/lib/pkgconfig/${PN}-gtk.pc"
-gtk2_0_canberra_module_CONTENTS="etc/ usr/lib/gtk-2.0/ usr/share/gnome/"
+gtk2_0_canberra_module_CONTENTS="etc/ usr/lib/gtk-2.0/ usr/share/gdm/ usr/share/gnome/"
+vala_libcanberra_CONTENTS="usr/share/vala/vapi/libcanberra.*"
+vala_libcanberra_gtk_CONTENTS="usr/share/vala/vapi/libcanberra-gtk.*"
 
 DIFF_EXCLUDES="libltdl"
 

@@ -11,16 +11,16 @@ consists of the following parts:
     trigger input feedback event sounds
 
 Runtime requirements:
-  cygwin-1.7.0-60
+  cygwin-1.7.0-61
   gstreamer0.10-plugins-base
   gstreamer0.10-plugins-good
   gstreamer0.10-plugins-ogg
   gstreamer0.10-plugins-oss
   gstreamer0.10-plugins-vorbis
   libgcc1-4.3.2-2
-  libglib2.0_0-2.20.4-1
-  libgstreamer0.10_0-0.10.23-1
-  libgtk2_0-2.16.5-1
+  libglib2.0_0-2.20.5-1
+  libgstreamer0.10_0-0.10.24-1
+  libgtk2_0-2.16.6-1
   libltdl7-2.2.7a-14
   libvorbisfile3-1.2.0-2
   libX11_6-1.2.2-1
@@ -32,7 +32,7 @@ Build requirements:
   automake1.10-1.10.2-10
   binutils-2.19.51-1
   cygport-0.9.9-1
-  gawk-3.1.6-2
+  gawk-3.1.7-1
   gcc4-core-4.3.2-2
   gnome-common-2.26.0-2
   gtk-doc-1.11-2
@@ -50,74 +50,28 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libcanberra-0.15-X-src.tar.bz2
+  unpack libcanberra-0.17-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libcanberra-0.15-X.cygport all
+  cygport ./libcanberra-0.17-X.cygport all
 
 This will create:
-  /usr/src/gtk2.0-canberra-module-0.15-X.tar.bz2
-  /usr/src/libcanberra-0.15-X-src.tar.bz2
-  /usr/src/libcanberra-devel-0.15-X.tar.bz2
-  /usr/src/libcanberra-gtk-devel-0.15-X.tar.bz2
-  /usr/src/libcanberra-gtk0-0.15-X.tar.bz2
-  /usr/src/libcanberra0-0.15-X.tar.bz2
+  /usr/src/gtk2.0-canberra-module-0.17-X.tar.bz2
+  /usr/src/libcanberra-0.17-X-src.tar.bz2
+  /usr/src/libcanberra-devel-0.17-X.tar.bz2
+  /usr/src/libcanberra-gtk-devel-0.17-X.tar.bz2
+  /usr/src/libcanberra-gtk0-0.17-X.tar.bz2
+  /usr/src/libcanberra0-0.17-X.tar.bz2
+  /usr/src/vala-libcanberra-0.17-X.tar.bz2
+  /usr/src/vala-libcanberra-gtk-0.17-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(gtk2.0-canberra-module)
-  /etc/gconf/schemas/libcanberra.schemas
-  /etc/postinstall/libcanberra.sh
-  /etc/preremove/libcanberra.sh
-  /usr/lib/gtk-2.0/modules/cygcanberra-gtk-module.dll
-  /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.la
-  /usr/share/gnome/autostart/libcanberra-login-sound.desktop
-  /usr/share/gnome/shutdown/libcanberra-logout-sound.sh
-
-(libcanberra0)
-  /usr/bin/cygcanberra-0.dll
-  /usr/lib/libcanberra-0.15/cygcanberra-gstreamer.dll
-  /usr/lib/libcanberra-0.15/cygcanberra-multi.dll
-  /usr/lib/libcanberra-0.15/cygcanberra-null.dll
-  /usr/lib/libcanberra-0.15/libcanberra-gstreamer.la
-  /usr/lib/libcanberra-0.15/libcanberra-multi.la
-  /usr/lib/libcanberra-0.15/libcanberra-null.la
-  /usr/share/doc/libcanberra/README
-
-(libcanberra-gtk0)
-  /usr/bin/cygcanberra-gtk-0.dll
-  /usr/bin/canberra-gtk-play.exe
-
-(libcanberra-devel)
-  /usr/include/canberra.h
-  /usr/lib/libcanberra.dll.a
-  /usr/lib/libcanberra.la
-  /usr/lib/pkgconfig/libcanberra.pc
-  /usr/share/gtk-doc/html/libcanberra/ch01.html
-  /usr/share/gtk-doc/html/libcanberra/home.png
-  /usr/share/gtk-doc/html/libcanberra/index.html
-  /usr/share/gtk-doc/html/libcanberra/index.sgml
-  /usr/share/gtk-doc/html/libcanberra/left.png
-  /usr/share/gtk-doc/html/libcanberra/libcanberra-canberra-gtk.html
-  /usr/share/gtk-doc/html/libcanberra/libcanberra-canberra.html
-  /usr/share/gtk-doc/html/libcanberra/libcanberra.devhelp
-  /usr/share/gtk-doc/html/libcanberra/libcanberra.devhelp2
-  /usr/share/gtk-doc/html/libcanberra/right.png
-  /usr/share/gtk-doc/html/libcanberra/style.css
-  /usr/share/gtk-doc/html/libcanberra/up.png
-
-(libcanberra-gtk-devel)
-  /usr/include/canberra-gtk.h
-  /usr/lib/libcanberra-gtk.dll.a
-  /usr/lib/libcanberra-gtk.la
-  /usr/lib/pkgconfig/libcanberra-gtk.pc
-
-------------------
-
 Port Notes:
+
+----- version 0.17-1 -----
+Version bump; added Vala bindings.
 
 ----- version 0.15-1 -----
 Version bump.
