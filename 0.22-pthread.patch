@@ -1,0 +1,11 @@
+--- origsrc/libcanberra-0.22/acinclude.m4	2008-06-10 09:33:40.000000000 -0500
++++ src/libcanberra-0.22/acinclude.m4	2009-11-01 00:30:57.571464400 -0500
+@@ -234,7 +234,7 @@ if test "x$acx_pthread_ok" = xyes; then
+    AC_MSG_CHECKING([whether to check for GCC pthread/shared inconsistencies])
+    check_inconsistencies=yes
+    case "${host_cpu}-${host_os}" in
+-     *-darwin*) check_inconsistencies=no ;;
++     *-cygwin*|*-darwin*) check_inconsistencies=no ;;
+    esac
+    if test x"$GCC" != xyes -o "x$check_inconsistencies" != xyes ; then
+       AC_MSG_RESULT([no])
