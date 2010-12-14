@@ -1,6 +1,6 @@
---- origsrc/libcanberra-0.9/src/Makefile.am	2008-09-02 12:18:17.000000000 -0500
-+++ src/libcanberra-0.9/src/Makefile.am	2008-10-05 07:56:48.763796800 -0500
-@@ -59,7 +59,7 @@
+--- origsrc/libcanberra-0.26/src/Makefile.am	2010-12-14 00:56:31.499593500 -0600
++++ src/libcanberra-0.26/src/Makefile.am	2010-12-14 00:56:22.089643000 -0600
+@@ -64,7 +64,7 @@ libcanberra_la_CFLAGS = \
  libcanberra_la_LIBADD = \
  	$(VORBIS_LIBS)
  libcanberra_la_LDFLAGS = \
@@ -9,7 +9,7 @@
  	-version-info $(LIBCANBERRA_VERSION_INFO)
  
  if USE_VERSION_SCRIPT
-@@ -106,7 +106,7 @@
+@@ -109,7 +109,7 @@ libcanberra_multi_la_CFLAGS = \
  libcanberra_multi_la_LIBADD = \
  	libcanberra.la
  libcanberra_multi_la_LDFLAGS = \
@@ -18,7 +18,7 @@
  endif
  
  if HAVE_PULSE
-@@ -139,7 +139,7 @@
+@@ -142,7 +142,7 @@ libcanberra_pulse_la_LIBADD = \
  	$(PULSE_LIBS) \
  	libcanberra.la
  libcanberra_pulse_la_LDFLAGS = \
@@ -27,7 +27,7 @@
  
  endif
  endif
-@@ -174,7 +174,7 @@
+@@ -177,7 +177,7 @@ libcanberra_alsa_la_LIBADD = \
  	$(ALSA_LIBS) \
  	libcanberra.la
  libcanberra_alsa_la_LDFLAGS = \
@@ -36,7 +36,7 @@
  
  endif
  endif
-@@ -203,7 +203,7 @@
+@@ -206,7 +206,7 @@ libcanberra_oss_la_CFLAGS = \
  libcanberra_oss_la_LIBADD = \
  	libcanberra.la
  libcanberra_oss_la_LDFLAGS = \
@@ -45,7 +45,7 @@
  endif
  endif
  
-@@ -237,7 +237,7 @@
+@@ -240,7 +240,7 @@ libcanberra_gstreamer_la_LIBADD = \
  	$(GST_LIBS) \
  	libcanberra.la
  libcanberra_gstreamer_la_LDFLAGS = \
@@ -54,7 +54,7 @@
  
  endif
  endif
-@@ -266,7 +266,7 @@
+@@ -269,7 +269,7 @@ libcanberra_null_la_CFLAGS = \
  libcanberra_null_la_LIBADD = \
  	libcanberra.la
  libcanberra_null_la_LDFLAGS = \
@@ -63,21 +63,39 @@
  endif
  endif
  
-@@ -293,7 +293,7 @@
+@@ -300,7 +300,7 @@ libcanberra_gtk3_la_LIBADD = \
+ 	$(GTK3_LIBS) \
+ 	libcanberra.la
+ libcanberra_gtk3_la_LDFLAGS = \
+-	-export-dynamic -version-info $(LIBCANBERRA_GTK_VERSION_INFO)
++	-export-dynamic -version-info $(LIBCANBERRA_GTK_VERSION_INFO) -no-undefined
+ 
+ libcanberra_gtk3_module_la_SOURCES = \
+ 	canberra-gtk-module.c
+@@ -311,7 +311,7 @@ libcanberra_gtk3_module_la_LIBADD = \
+ 	libcanberra.la \
+ 	libcanberra-gtk3.la
+ libcanberra_gtk3_module_la_LDFLAGS = \
+-	-avoid-version -module -export-dynamic
++	-avoid-version -module -export-dynamic -no-undefined
+ 
+ install-exec-hook:
+ 	$(MKDIR_P) -m 755 $(DESTDIR)$(gtk3moduledir)
+@@ -338,7 +338,7 @@ libcanberra_gtk_la_LIBADD = \
  	$(GTK_LIBS) \
  	libcanberra.la
  libcanberra_gtk_la_LDFLAGS = \
 -	-export-dynamic -version-info $(LIBCANBERRA_GTK_VERSION_INFO)
-+	-export-dynamic -no-undefined -version-info $(LIBCANBERRA_GTK_VERSION_INFO)
++	-export-dynamic -version-info $(LIBCANBERRA_GTK_VERSION_INFO) -no-undefined
  
  libcanberra_gtk_module_la_SOURCES = \
  	canberra-gtk-module.c
-@@ -304,7 +304,7 @@
+@@ -349,7 +349,7 @@ libcanberra_gtk_module_la_LIBADD = \
  	libcanberra.la \
  	libcanberra-gtk.la
  libcanberra_gtk_module_la_LDFLAGS = \
 -	-avoid-version -module -export-dynamic
 +	-avoid-version -module -export-dynamic -no-undefined
  
- canberra_gtk_play_SOURCES = \
- 	canberra-gtk-play.c
+ endif
+ 
