@@ -1,5 +1,5 @@
 category: Audio Gnome
-requires: libcanberra-gtk3_0 libcanberra-devel libglib2.0-devel libgtk3.0-devel
+requires: libcanberra-gtk3_0 libcanberra-devel libglib2.0-devel libgtk3-devel
 external-source: libcanberra
 sdesc: "Freedesktop.org Sound Theme library (GTK3 development)"
 ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name

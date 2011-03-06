@@ -16,19 +16,18 @@ PKG_NAMES="${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module
            ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3.0-canberra-module
            vala-libcanberra vala-libcanberra-gtk"
 libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/share/doc/"
-libcanberra_devel_CONTENTS="usr/include/canberra.h usr/lib/${PN}.*
+libcanberra_devel_CONTENTS="usr/include/ usr/lib/${PN}.*
                             usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
-libcanberra_gtk0_CONTENTS="usr/bin/canberra-gtk-play.exe usr/bin/cygcanberra-gtk-0.dll"
-libcanberra_gtk_devel_CONTENTS="usr/include/canberra-gtk.h usr/lib/${PN}-gtk.*
-                                usr/lib/pkgconfig/${PN}-gtk.pc"
+libcanberra_gtk0_CONTENTS="usr/bin/cygcanberra-gtk-0.dll"
+libcanberra_gtk_devel_CONTENTS="usr/lib/${PN}-gtk.* usr/lib/pkgconfig/${PN}-gtk.pc"
 libcanberra_gtk3_0_CONTENTS="usr/bin/cygcanberra-gtk3-0.dll"
 libcanberra_gtk3_devel_CONTENTS="usr/lib/${PN}-gtk3.* usr/lib/pkgconfig/${PN}-gtk3.pc"
-gtk2_0_canberra_module_CONTENTS="etc/ usr/lib/gtk-2.0/ usr/share/gdm/ usr/share/gnome/"
+gtk2_0_canberra_module_CONTENTS="etc/ usr/bin/canberra-gtk-play.exe usr/lib/gtk-2.0/ usr/share/gnome/"
 gtk3_0_canberra_module_CONTENTS="usr/lib/gtk-3.0/"
 vala_libcanberra_CONTENTS="usr/share/vala/vapi/libcanberra.*"
 vala_libcanberra_gtk_CONTENTS="usr/share/vala/vapi/libcanberra-gtk.*"
+PKG_IGNORE="usr/share/gdm/"
 
 DIFF_EXCLUDES="libltdl"
 
-# stick with gstreamer...
-CYGCONF_ARGS="--disable-alsa --disable-oss --disable-pulse --with-builtin=gstreamer"
+CYGCONF_ARGS="--disable-alsa --disable-gstreamer --disable-pulse --with-builtin=oss"
