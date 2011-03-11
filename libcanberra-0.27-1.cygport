@@ -13,7 +13,7 @@ PATCH_URI="
 "
 
 PKG_NAMES="${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module
-           ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3.0-canberra-module
+           ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3-canberra-module
            vala-libcanberra vala-libcanberra-gtk"
 libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/share/doc/"
 libcanberra_devel_CONTENTS="usr/include/ usr/lib/${PN}.*
@@ -23,7 +23,7 @@ libcanberra_gtk_devel_CONTENTS="usr/lib/${PN}-gtk.* usr/lib/pkgconfig/${PN}-gtk.
 libcanberra_gtk3_0_CONTENTS="usr/bin/cygcanberra-gtk3-0.dll"
 libcanberra_gtk3_devel_CONTENTS="usr/lib/${PN}-gtk3.* usr/lib/pkgconfig/${PN}-gtk3.pc"
 gtk2_0_canberra_module_CONTENTS="etc/ usr/bin/canberra-gtk-play.exe usr/lib/gtk-2.0/ usr/share/gnome/"
-gtk3_0_canberra_module_CONTENTS="usr/lib/gtk-3.0/"
+gtk3_canberra_module_CONTENTS="usr/lib/gtk-3.0/"
 vala_libcanberra_CONTENTS="usr/share/vala/vapi/libcanberra.*"
 vala_libcanberra_gtk_CONTENTS="usr/share/vala/vapi/libcanberra-gtk.*"
 PKG_IGNORE="usr/share/gdm/"
