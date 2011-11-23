@@ -1,5 +1,5 @@
 category: Devel Audio
-requires: vala libcanberra-devel
+requires: vala
 external-source: libcanberra
 sdesc: "Vala libcanberra bindings"
 ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name
