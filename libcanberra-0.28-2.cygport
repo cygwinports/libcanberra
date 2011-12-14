@@ -13,7 +13,7 @@ PATCH_URI="
 PKG_NAMES="${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module
            ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3-canberra-module
            vala-libcanberra vala-libcanberra-gtk"
-libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/share/doc/"
+libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${P}/ usr/share/doc/"
 libcanberra_devel_CONTENTS="usr/include/ usr/lib/${PN}.*
                             usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
 libcanberra_gtk0_CONTENTS="usr/bin/cygcanberra-gtk-0.dll"
@@ -29,4 +29,4 @@ PKG_IGNORE="usr/share/gdm/"
 
 DIFF_EXCLUDES="libltdl"
 
-CYGCONF_ARGS="--disable-alsa --disable-gstreamer --disable-pulse --with-builtin=oss"
+CYGCONF_ARGS="--disable-alsa --disable-udev"

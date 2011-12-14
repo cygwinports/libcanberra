@@ -1,5 +1,5 @@
 category: Audio
-requires: libcanberra0 libvorbis-devel
+requires: libcanberra0 libtdb-devel libvorbis-devel
 external-source: libcanberra
 sdesc: "Freedesktop.org Sound Theme library (development)"
 ldesc: "libcanberra is an implementation of the XDG Sound Theme and Name
