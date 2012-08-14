@@ -1,0 +1,60 @@
+inherit gnome2
+
+CATEGORY="X11"
+SUMMARY="XDG Sound Theme library"
+DESCRIPTION="libcanberra is an implementation of the XDG Sound Theme and Name
+Specifications, for generating event sounds on free desktops, such as
+GNOME. It comes with several backends and is designed to be portable."
+HOMEPAGE="http://0pointer.de/lennart/projects/libcanberra"
+SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.xz"
+
+PATCH_URI="
+	0.26-no-undefined.patch
+	0.22-pthread.patch
+	0.26-cygwin-gtk3.patch
+"
+
+PKG_NAMES="${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module
+           ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3-canberra-module
+           vala-libcanberra vala-libcanberra-gtk"
+libcanberra0_SUMMARY="${SUMMARY} (core runtime)"
+libcanberra0_REQUIRES="sound-theme-freedesktop"
+libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${P}/ usr/share/doc/"
+libcanberra_devel_SUMMARY="${SUMMARY} (core development)"
+libcanberra_devel_CONTENTS="usr/include/ usr/lib/${PN}.*
+                            usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
+libcanberra_gtk0_SUMMARY="${SUMMARY} (GTK+2 runtime)"
+libcanberra_gtk0_CONTENTS="usr/bin/cygcanberra-gtk-0.dll"
+libcanberra_gtk_devel_SUMMARY="${SUMMARY} (GTK+2 development)"
+libcanberra_gtk_devel_CONTENTS="usr/lib/${PN}-gtk.* usr/lib/pkgconfig/${PN}-gtk.pc"
+libcanberra_gtk3_0_SUMMARY="${SUMMARY} (GTK+3 runtime)"
+libcanberra_gtk3_0_CONTENTS="usr/bin/cygcanberra-gtk3-0.dll"
+libcanberra_gtk3_devel_SUMMARY="${SUMMARY} (GTK+3 development)"
+libcanberra_gtk3_devel_CONTENTS="usr/lib/${PN}-gtk3.* usr/lib/pkgconfig/${PN}-gtk3.pc"
+gtk2_0_canberra_module_SUMMARY="GTK+2 sound event module"
+gtk2_0_canberra_module_CONTENTS="usr/lib/gtk-2.0/"
+gtk3_canberra_module_SUMMARY="GNOME 3 sound event support modules"
+gtk3_canberra_module_CONTENTS="usr/bin/canberra-gtk-play.exe usr/lib/gtk-3.0/
+                               usr/lib/gnome-settings-daemon-3.0/ usr/share/gnome/"
+vala_libcanberra_SUMMARY="${SUMMARY} (Vala bindings)"
+vala_libcanberra_CONTENTS="usr/share/vala/vapi/"
+vala_libcanberra_gtk_CATEGORY="_obsolete"
+vala_libcanberra_gtk_SUMMARY="Obsolete package"
+vala_libcanberra_gtk_REQUIRES="vala-libcanberra"
+PKG_IGNORE="usr/share/gdm/"
+
+DIFF_EXCLUDES="libltdl"
+
+# gstreamer: ranks below oss (src/driver-order.c)
+CYGCONF_ARGS="
+	--disable-alsa
+	--disable-gstreamer
+	--enable-gtk
+	--enable-gtk3
+	--enable-oss
+	--enable-pulse
+	--enable-tdb
+	--disable-udev
+"
+
+KEEP_LA_FILES="module"
