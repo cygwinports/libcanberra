@@ -1,5 +1,8 @@
 inherit gnome2
 
+NAME="libcanberra"
+VERSION=0.30
+RELEASE=1
 CATEGORY="X11"
 SUMMARY="XDG Sound Theme library"
 DESCRIPTION="libcanberra is an implementation of the XDG Sound Theme and Name
@@ -56,5 +59,3 @@ CYGCONF_ARGS="
 	--enable-tdb
 	--disable-udev
 "
-
-KEEP_LA_FILES="module"
