@@ -9,7 +9,7 @@ DESCRIPTION="libcanberra is an implementation of the XDG Sound Theme and Name
 Specifications, for generating event sounds on free desktops, such as
 GNOME. It comes with several backends and is designed to be portable."
 HOMEPAGE="http://0pointer.de/lennart/projects/libcanberra"
-SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.xz"
+SRC_URI="http://0pointer.de/lennart/projects/${NAME}/${NAME}-${VERSION}.tar.xz"
 
 PATCH_URI="
 	0.26-no-undefined.patch
@@ -17,23 +17,23 @@ PATCH_URI="
 	0.26-cygwin-gtk3.patch
 "
 
-PKG_NAMES="${PN}0 ${PN}-devel ${PN}-gtk0 ${PN}-gtk-devel gtk2.0-canberra-module
-           ${PN}-gtk3_0 ${PN}-gtk3-devel gtk3-canberra-module
+PKG_NAMES="${NAME}0 ${NAME}-devel ${NAME}-gtk0 ${NAME}-gtk-devel gtk2.0-canberra-module
+           ${NAME}-gtk3_0 ${NAME}-gtk3-devel gtk3-canberra-module
            vala-libcanberra vala-libcanberra-gtk"
 libcanberra0_SUMMARY="${SUMMARY} (core runtime)"
 libcanberra0_REQUIRES="sound-theme-freedesktop"
-libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${P}/ usr/share/doc/"
+libcanberra0_CONTENTS="usr/bin/cygcanberra-0.dll usr/lib/${NAME}-${VERSION}/ usr/share/doc/"
 libcanberra_devel_SUMMARY="${SUMMARY} (core development)"
-libcanberra_devel_CONTENTS="usr/include/ usr/lib/${PN}.*
-                            usr/lib/pkgconfig/${PN}.pc usr/share/gtk-doc/"
+libcanberra_devel_CONTENTS="usr/include/ usr/lib/${NAME}.*
+                            usr/lib/pkgconfig/${NAME}.pc usr/share/gtk-doc/"
 libcanberra_gtk0_SUMMARY="${SUMMARY} (GTK+2 runtime)"
 libcanberra_gtk0_CONTENTS="usr/bin/cygcanberra-gtk-0.dll"
 libcanberra_gtk_devel_SUMMARY="${SUMMARY} (GTK+2 development)"
-libcanberra_gtk_devel_CONTENTS="usr/lib/${PN}-gtk.* usr/lib/pkgconfig/${PN}-gtk.pc"
+libcanberra_gtk_devel_CONTENTS="usr/lib/${NAME}-gtk.* usr/lib/pkgconfig/${NAME}-gtk.pc"
 libcanberra_gtk3_0_SUMMARY="${SUMMARY} (GTK+3 runtime)"
 libcanberra_gtk3_0_CONTENTS="usr/bin/cygcanberra-gtk3-0.dll"
 libcanberra_gtk3_devel_SUMMARY="${SUMMARY} (GTK+3 development)"
-libcanberra_gtk3_devel_CONTENTS="usr/lib/${PN}-gtk3.* usr/lib/pkgconfig/${PN}-gtk3.pc"
+libcanberra_gtk3_devel_CONTENTS="usr/lib/${NAME}-gtk3.* usr/lib/pkgconfig/${NAME}-gtk3.pc"
 gtk2_0_canberra_module_SUMMARY="GTK+2 sound event module"
 gtk2_0_canberra_module_CONTENTS="usr/lib/gtk-2.0/"
 gtk3_canberra_module_SUMMARY="GNOME 3 sound event support modules"
