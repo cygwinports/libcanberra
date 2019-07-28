@@ -1,0 +1,11 @@
+--- origsrc/libcanberra-0.30/gtkdoc/Makefile.am	2009-01-21 15:52:46.000000000 -0500
++++ src/libcanberra-0.30/gtkdoc/Makefile.am	2019-07-28 18:46:48.676525500 -0400
+@@ -71,7 +71,7 @@ INCLUDES=
+ GTKDOC_LIBS=
+ 
+ # This includes the standard gtk-doc make rules, copied by gtkdocize.
+-include $(top_srcdir)/gtkdoc/gtk-doc.make
++include $(top_srcdir)/gtk-doc.make
+ 
+ # Other files to distribute
+ # e.g. EXTRA_DIST += version.xml.in
